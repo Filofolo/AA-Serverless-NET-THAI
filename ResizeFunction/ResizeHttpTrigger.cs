@@ -91,3 +91,8 @@ namespace THAI_HttpTrigger
 
 // Après déployement, en AuthorizationLevel.Anonymous on peut tester la fonction avec la commande suivante : curl --data-binary "@image.jpg" -X POST "https://thaiflorian-fa.azurewebsites.net/api/ResizeHttpTrigger?w=100&h=100" -v > output.jpeg
 // Après déployement, en AuthorizationLevel.Function on peut tester la fonction avec la commande suivante : curl --data-binary "@image.jpg" -X POST "https://thaiflorian-fa.azurewebsites.net/api/ResizeHttpTrigger?w=100&h=100" -H "x-functions-key: YOUR_FUNCTION_KEY " -v > output.jpeg
+
+/* pour tester la logic app, écrire dans le cli : 
+florian [ ~ ]$ wget https://a.travel-assets.com/findyours-php/viewfinder/images/res70/106000/106681-Metz.jpg -O test.jpg
+florian [ ~ ]$ az storage blob upload   --account-name thaiserverlessnet8467   --container-name thaiflorian-la-container   --file test.jpg   --name test.jpg   --auth-mode key   --account-key YOUR_ACCESS_KEY
+*/
